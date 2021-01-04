@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="dist/theme/moon.css" id="theme">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
@@ -16,8 +16,78 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h1>TypeScript</h1>
+					<h3>Anna Tolstova</h3>
+				</section>
+				<section>
+					<h3>Top languages over the years</h3>					
+					<img src="assets/octoverse.png" style="height: 400px;">
+					<p>https://octoverse.github.com/</p>
+				</section>
+				<section>
+					<h3>What is TypeScript?</h3>
+					<ul>
+						<li>TypeScript is typed superset of Javascript</li>
+						<li>TypeScript compiles to Javascript</li>
+						<li>Developed and maintained by Microsoft</li>
+						<li>Opensource</li>
+						<li>
+							Documentation <a href="https://www.typescriptlang.org/docs">www.typescriptlang.org</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Static type checking</h3>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						let two: number = 2;
+						two = '2'; // Error: cannot assign 'string' to 'number'
+					</code></pre>
+					<ul>
+						<li>Allows IDEs to perform live error checks</li>
+						<li>Exposes auto-completion and code hinting</li>
+						<li>Easier refactor process</li>
+						<li>Less unit testing</li>
+					</ul>	
+				</section>
+				<section>
+					<h3>Interface</h3>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						interface IName {
+							propName1[:type]; // required property
+							propName2?[:type]; // optional property
+							[propName: string][:type]; // extra properties
+						}
+					</code></pre>
+					<ul>
+						<li>Design time feature (no extra code would be emitted to JS file</li>
+						<li>Errors being shown when interface signature and implementation doesn’t match</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Functions</h3>
+					<ul>
+						<li>With function keyword</li>
+						<pre data-id="code-animation" style="width:100%"><code class="hljs" data-trim data-line-numbers>
+							function fnName(param1[:type], 		// required
+									param2[:type] = value,	// with default value
+								 	param3?[:type], 	// optional
+									...restParams[:type[]] 	// rest parameters
+									)[:type] {
+								// expression
+							}
+						</code></pre>
+						<li>Arrow function</li>
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+							let fnName = (...restParams[:type[]]): [:type] => {
+								// expression
+							}
+						</code></pre>
+					</ul>
+				</section>
+				<section>
+					<h1>Thank You!</h1>
+				</section>
 			</div>
 		</div>
 
